@@ -25,7 +25,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mainLabel: UILabel!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
+
+        
+        
         timer.invalidate() //this stops any timer that's running when the button is pressed
         
         //the hardness constant allows us to assign the current tytle of the button to other things
@@ -36,6 +41,8 @@ class ViewController: UIViewController {
         
         //Timer.scheduledTimer would have worked without the timer variable. it's only there so we can trigger it and stop it
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
+        
 }
 
     
@@ -48,6 +55,7 @@ class ViewController: UIViewController {
     } else {
         timer.invalidate()
         mainLabel.text = "Done"
+        
     }
 }
 }
