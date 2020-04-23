@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // instead of declaring several constants, we can create a dictionary.
     //If using several constants, we could use either a switch or an if else statement
-    let eggTimes = ["Soft": 3, "Medium": 420, "Hard": 720]
+    let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
     
     var counter = 60
     
